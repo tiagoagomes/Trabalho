@@ -4,20 +4,17 @@ const sequelize = require("../config");
 const Person = sequelize.define(
   "Person",
   {
-    name: {
+    nome: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    age: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    email: {
+    cep: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isEmail: true,
-      },
+    },
+    cpf: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
